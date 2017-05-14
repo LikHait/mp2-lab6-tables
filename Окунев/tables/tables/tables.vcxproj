@@ -146,12 +146,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Tables.h" />
+    <ClInclude Include="Tables.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="TabRecord.h" />
+    <ClInclude Include="TabRecordWithState.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tables.cpp" />
+    <ClCompile Include="sample.cpp" />
+    <ClCompile Include="Tables.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="TabRecord.cpp" />
+    <ClCompile Include="TabRecordWithState.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

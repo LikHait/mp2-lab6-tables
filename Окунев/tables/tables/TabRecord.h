@@ -6,18 +6,17 @@ typedef int Date; //test
 
 class TabRecord
 {
-private:
+protected:
 	string Key;
-	Date Value;
+	Date* Value;
 public:
-	TabRecord();
-	TabRecord(string key, Date value);
+	TabRecord(string key = "", Date* value = NULL);
 	~TabRecord();
 //методы
 	void SetKey(string key);
 	string GetKey();
-	void SetValue(Date val);
-	Date GetValue();
+	void SetValue(Date* val);
+	Date* GetValue();
 //операторы сравнения
 	bool operator==(const TabRecord &tr);
 	bool operator> (const TabRecord &tr);
