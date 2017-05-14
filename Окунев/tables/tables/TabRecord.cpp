@@ -30,6 +30,15 @@ Date* TabRecord::GetValue()
 	return Value;
 }
 
+TabRecord & TabRecord::operator=(const TabRecord & rec)
+{
+	Key = rec.Key;
+	delete Value;
+	Value = new Date;
+	*Value = *(rec.Value);
+	return *this;
+}
+
 bool TabRecord::operator==(const TabRecord & tr)
 {
 	return Key == tr.Key;
