@@ -3,6 +3,7 @@
 Tables::Tables(size_t size)
 {
 	TabSize = size;
+	DataCount = 0;
 }
 
 size_t Tables::GetSize()
@@ -12,10 +13,10 @@ size_t Tables::GetSize()
 
 bool Tables::IsFull()
 {
-	return TabSize = DataCount;
+	return TabSize == DataCount;
 }
 
-bool Tables::IsEmpry()
+bool Tables::IsEmpty()
 {
-	return DataCount = 0;
+	return DataCount == 0;
 }

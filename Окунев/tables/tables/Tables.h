@@ -12,8 +12,6 @@ public:
 	virtual ~Tables() = 0;
 //методы
 	size_t GetSize();
-	virtual int AddEl() = 0;
-	virtual int DelEl() = 0;
 	bool IsFull();
-	bool IsEmpry();
+	bool IsEmpty();
 };

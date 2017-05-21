@@ -69,7 +69,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\polinom.cpp" />
-    <ClCompile Include="..\sample.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -6,9 +6,14 @@ class LinTab :
 	public Tables
 {
 private:
-	TabRecord* firstRec;
+	TabRecord* pRecs;
 public:
-	LinTab(TabRecord first);
+	LinTab(size_t size = MAX_SIZE);
 	~LinTab();
+
+	int FindRecord(string key);
+	void AddEl(TabRecord rec);
+	void DelEl(string key);
+	TabRecord* GetRecord(string key);
 };
 

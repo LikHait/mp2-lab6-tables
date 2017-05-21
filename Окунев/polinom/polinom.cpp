@@ -1,5 +1,7 @@
 ﻿#include "polinom.h"
 
+int TPolinom::p;
+
 double TPolinom::CalculateMonom(TMonom monom, double x, double y, double z)
 {
     if (pFirst == pFirst->pNext)
